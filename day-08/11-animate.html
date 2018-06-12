@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                background-color: crimson;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div>edureka!</div>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                // this animation will work in browsers that do not support CSS3 as well
+                $( 'div' ).on(
+                    {
+                        mouseover: function() {
+                            $( this ).animate(
+                                {
+                                    width: '200px',
+                                    height: '200px',
+                                    'line-height': '200px'
+                                }, 
+                                150
+                            );
+                        },
+                        mouseout: function() {
+                            $( this ).animate(
+                                {
+                                    width: '100px',
+                                    height: '100px',
+                                    'line-height': '100px'
+                                }, 
+                                150
+                            );
+                        }
+                    }
+                )
+            });
+        </script>
+    </body>
+</html>

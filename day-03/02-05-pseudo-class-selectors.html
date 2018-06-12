@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pseudo-class selectors</title>
+        <style>
+            .bold {
+                font-weight: bold;
+            }
+
+            p:first-line {
+                color: crimson;
+            }
+
+            :first-letter {
+                font-size: 3cm; /* cm is an absolute unit */
+            }
+
+            p:nth-child(1) {
+                text-decoration: underline;   
+            }
+
+            p:last-child {
+                font-weight: bold;
+            }
+
+            p {
+                width: 50%; /* percentage is a relative unit - width %s are in relation to width of the parent element */
+                line-height: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="bold">
+            Ipsum veniam nostrud mollit magna id voluptate pariatur nostrud magna. Est in anim elit sint irure enim amet occaecat non incididunt ipsum cillum est laboris. Velit voluptate ad aliqua aliqua ut. Ad Lorem nisi sint labore. Enim tempor fugiat qui Lorem anim aute. Mollit aliquip laboris deserunt enim consectetur elit aliquip in qui minim consequat. Elit velit ipsum minim sit consequat magna voluptate velit pariatur adipisicing magna.
+        </p>
+
+        <section>
+            Incididunt proident ad Lorem do cupidatat velit et ad aute commodo. Qui pariatur laboris do et deserunt sint non amet aliquip esse adipisicing ullamco do. Officia in excepteur enim eiusmod. Quis adipisicing consequat reprehenderit ea voluptate.
+        </section>
+
+        <p>
+            Id Lorem ad consequat do elit commodo in culpa veniam sint duis laboris sint. Ut velit sunt dolor excepteur. Aliquip aliqua velit elit Lorem officia aliqua magna id laboris fugiat proident.
+        </p>
+
+        <p>
+            Sint aute proident esse ut fugiat amet quis exercitation. Enim culpa magna fugiat velit. Esse sunt in veniam aliquip.
+        </p>
+
+        <p>
+            Dolore reprehenderit aute aute adipisicing. Officia laboris nisi ex tempor officia aute amet consequat. Laborum duis elit nostrud tempor in deserunt dolore deserunt reprehenderit exercitation veniam sunt mollit velit. Ullamco proident non est commodo est. Consequat exercitation laborum reprehenderit sint et reprehenderit labore qui amet veniam est. Do consequat labore proident ea anim officia anim ex. Quis eiusmod elit ad nisi officia commodo.
+        </p>
+    </body>
+</html>

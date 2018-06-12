@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Navigation Menu</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            
+            .list-unstyled {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .menu, .dropdown-menu {
+                background-color: #ddd;
+            }
+
+            .menu > li, .dropdown-menu > li {
+                display: inline-block;
+                padding: 10px 20px;
+            }
+
+            .menu > li a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .menu > li:hover a, .dropdown-menu > li:hover a {
+                color: #33aadf;
+                display: inline-block;
+                width: 100%;
+            }
+
+            .dropdown {
+                position: relative;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                display: none;
+                top: 38px;
+            }
+
+            .menu > li:hover .dropdown-menu {
+                display: block;
+                width: 240px;
+                box-shadow: 0px 0px 2px 2px #aaa;
+            }
+
+            .menu > li:hover .dropdown-menu > li {
+                display: block;
+            }
+
+            .menu > li:hover .dropdown-menu > li:hover {
+                background-color: lightpink;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="menu list-unstyled">
+            <li><a href="/">edureka!</a></li>
+            <li><a href="our-story.html">Our story</a></li>
+            <li class="dropdown">
+                <a href="#">Courses</a>
+                <ul class="dropdown-menu list-unstyled">
+                    <li><a href="#">Complete Web Developer</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">Node.js</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </body>
+</html>

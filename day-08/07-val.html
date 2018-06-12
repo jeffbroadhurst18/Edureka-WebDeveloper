@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        Name: <input type="text" id="name" />
+        <input type="button" id="btn-display-name" value="Log name" />
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                $( '#btn-display-name' ).click(function() {
+                    // as a getter
+                    console.log( $( '#name' ).val() );
+
+                    // as a setter
+                    $( '#name' ).val( '' );
+                });
+            });
+        </script>
+    </body>
+</html>

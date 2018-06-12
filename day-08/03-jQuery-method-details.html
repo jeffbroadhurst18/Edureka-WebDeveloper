@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <p id="para-1">
+            Non id nisi aute ullamco cupidatat ipsum aute ad fugiat sint occaecat. Aliquip duis est dolore duis ea id commodo elit id dolore reprehenderit. Eu dolore enim ullamco eiusmod consequat cillum excepteur. Lorem in cupidatat commodo velit officia eu et sunt anim laboris consequat velit labore. Ad voluptate eiusmod consequat esse nostrud aliquip nostrud velit fugiat occaecat eiusmod cupidatat. Laborum tempor do incididunt esse do nulla sunt commodo dolore mollit aute cupidatat ipsum.
+        </p>
+
+        <p id="para-2">
+            Esse veniam id ea in. Nostrud amet consectetur occaecat cillum eiusmod duis velit consectetur et consequat incididunt eiusmod exercitation. Consequat laborum non sit nisi pariatur reprehenderit cupidatat.
+        </p>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                // para1 is a collection object and NOT a DOM node
+                // a collection object is however like an array of DOM nodes
+                var para1 = $( '#para-1' );
+                console.log( para1 );
+                console.log( para1[0] );
+
+                var paras = $( 'p' );
+                console.log( paras );
+                console.log( 'paras[0] = ', paras[0] );
+                console.log( 'paras[1] = ', paras[1] );
+            });
+        </script>
+    </body>
+</html>

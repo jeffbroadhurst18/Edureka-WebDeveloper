@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Web Forms 2.0</title>
+    </head>
+    <body>
+        <!--
+            HTML5 input types
+            number, email, url, tel, range, color, date, datetime, search
+            attributes: placeholder, required, autocomplete="off"/"on", autofocus, min, max, formnovalidate (on submit button)
+        -->
+        <form>
+            <label>Quantity <input type="number" required /></label>
+            <label>Your email id <input type="email" autofocus /></label>
+            <label>Your website <input type="url" placeholder="https://mysite.com/" /></label>
+            <label>Your telephone number <input type="tel" placeholder="+1 456789012" /></label>
+            <label>Rate this product <input type="range" min="1" max="5" /></label>
+            <label>Start Date <input type="date" min="2018-05-11" max="2018-06-12" /></label>
+            <label>Search <input type="search" /></label>
+
+            <button>Submit</button>
+            <button formnovalidate>Submit (skip validations)</button>
+        </form>
+    </body>
+</html>

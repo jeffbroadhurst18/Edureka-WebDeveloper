@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Attribute selector</title>
+        <style>
+            /* select an element based on existence of an attribute and optionally its value (target attribute here) */
+            a[target="_blank"] {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://www.google.com">Google search page</a>
+        <a href="https://www.google.com" target="_blank">Google search page</a>
+        <a href="https://www.google.com">Google search page</a>
+    </body>
+</html>

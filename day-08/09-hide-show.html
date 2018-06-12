@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <p class="para">
+            Tempor et ex deserunt cupidatat nisi officia. Consequat esse ut aliqua consectetur elit consectetur. Voluptate non amet aliqua nulla velit veniam fugiat veniam commodo laboris elit duis magna. Velit pariatur veniam aliquip irure reprehenderit deserunt.
+        </p>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <button id="toggle">Toggle display</button>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                $( '#hide' ).click(function() {
+                    $( '.para' ).hide();
+                });
+
+                $( '#show' ).click(function() {
+                    $( '.para' ).show();
+                });
+                
+                $( '#toggle' ).click(function() {
+                    $( '.para' ).toggle();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Animation</title>
+        <style>
+            div {
+                position: relative;
+                width: 120px;
+                height: 120px;
+                margin: 100px;
+                background-color: crimson;
+                color: white;
+                text-align: center;
+                line-height: 120px;
+            }
+
+            div:nth-child(1) {
+                animation: move 5s infinite ease-in-out, color 20s infinite;
+            }
+            
+            div:nth-child(2) {
+                animation: move 5s infinite linear, color 20s infinite;
+            }
+
+            @keyframes color {
+                0% { background-color: crimson; }
+                50% { background-color: goldenrod; }
+                100% { background-color: crimson; }
+            }
+
+            @-webkit-keyframes move {
+                0% {
+                    top: 0px;
+                    left: 0px;
+                }
+
+                25% {
+                    top: 0px;
+                    left: 300px;
+                }
+                
+                50% {
+                    top: 300px;
+                    left: 300px;
+                }
+                
+                75% {
+                    top: 300px;
+                    left: 0px;
+                }
+                
+                100% {
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+
+            @keyframes move {
+                0% {
+                    top: 0px;
+                    left: 0px;
+                }
+
+                25% {
+                    top: 0px;
+                    left: 300px;
+                }
+                
+                50% {
+                    top: 300px;
+                    left: 300px;
+                }
+                
+                75% {
+                    top: 300px;
+                    left: 0px;
+                }
+                
+                100% {
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>edureka!</div>
+        <div>edureka!</div>
+    </body>
+</html>

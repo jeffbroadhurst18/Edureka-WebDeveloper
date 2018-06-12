@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hide and show elements</title>
+        <style>
+            /* Options for hiding an showing */
+            /* first option - box is not preserved */
+            /*p:nth-child(2) {
+                display: none;
+            }*/
+
+            /* second option - box is preserved */
+            /*p:nth-child(2) {
+                visibility: hidden;
+            }*/
+
+            /* third option - use opacity */
+            p:nth-child(2) {
+                position: relative;
+                opacity: 0.6; /* takes value between 0 (transparent) and 1 (opaque - the default value) */ 
+                z-index: 1;
+                background: olive;
+            }
+
+            p:nth-child(3) {
+                position: relative;
+                top: -50px;
+                padding: 10px;
+                background-color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Qui mollit excepteur est consectetur irure incididunt anim deserunt. Tempor consequat adipisicing sunt non aliquip laboris sint commodo magna cupidatat in. Qui dolor Lorem consectetur Lorem fugiat laborum sunt labore. Exercitation pariatur qui est exercitation est voluptate dolore. Excepteur magna sit occaecat consectetur. Ipsum eu ex commodo qui mollit non qui eiusmod. Consequat do qui ullamco qui irure occaecat Lorem ea non qui pariatur cillum sint laborum.
+        </p>
+        <p>
+            Consequat ipsum anim ullamco qui reprehenderit aliquip ullamco dolor enim minim elit incididunt enim. Irure do ea sint est esse quis sunt. Et ea in commodo do magna dolor et officia adipisicing quis sint eu cupidatat consectetur. Pariatur pariatur dolore sunt velit consectetur exercitation aute deserunt culpa ex non irure qui. Nisi consequat veniam eu non non commodo ullamco esse sit dolor occaecat minim. Irure excepteur consectetur excepteur sit voluptate quis esse tempor ea aliqua id Lorem incididunt exercitation. Sint nostrud duis officia irure et consequat consequat ullamco cillum dolore.
+        </p>
+        <p>
+            Ad sit dolor qui dolore aute in aute exercitation anim exercitation. Cupidatat ipsum ut ut minim. Nostrud qui sint minim consequat consectetur dolor duis labore ex dolor dolor pariatur quis incididunt. Incididunt amet pariatur sit velit Lorem nisi culpa nostrud aliquip mollit consequat proident. Proident occaecat ea sit elit Lorem nisi. Voluptate eu irure magna irure minim proident exercitation. Ex minim ex sint aliqua fugiat pariatur laborum laboris excepteur ipsum aliquip. Ipsum exercitation veniam cillum sint aliquip sit pariatur officia nulla. Laboris magna irure dolore dolor nisi deserunt duis eiusmod sunt quis. Do est eu est aute pariatur sit. In est velit non anim proident voluptate adipisicing magna elit do ex qui minim.
+        </p>
+    </body>
+</html>

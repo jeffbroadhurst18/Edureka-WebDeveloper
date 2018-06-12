@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Canvas</title>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Note: Set up the canvas width and height only using HTML tags - do not do this is CSS
+        -->
+        <canvas width="800" height="600" id="main-canvas">
+            Your browser does not support canvas
+        </canvas>
+
+        <script>
+            var canvas = document.getElementById( 'main-canvas' );
+
+            var ctx = canvas.getContext( '2d' );
+
+            ctx.strokeStyle = 'crimson';
+            ctx.moveTo( 300, 200 );
+            ctx.lineTo( 600, 400 );
+            ctx.stroke();
+
+            ctx.strokeStyle = 'olive';
+            ctx.rect( 300, 300, 200, 100 );
+            ctx.stroke();
+
+            /*
+            circle is centered at ( 400, 300 )
+            50px is the radius
+            0 -> start angle
+            Math.PI -> end angle
+            */
+            ctx.arc( 400, 300, 50, 0, 1.5 * Math.PI );
+            ctx.stroke();
+
+            ctx.font = '30px Garamond';
+            ctx.fillStyle = 'crimson';
+            ctx.fillText( 'Hello', 200, 400 );
+        </script>
+    </body>
+</html>

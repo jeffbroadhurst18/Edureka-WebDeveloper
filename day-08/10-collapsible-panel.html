@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <style>
+            .panel {
+                border: 1px solid crimson;
+                border-radius: 4px;
+                margin: 10px 0;
+            }
+
+            .panel-heading, .panel-body {
+                padding: 10px;
+            }
+
+            .panel-heading {
+                background-color: crimson;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="panel">
+            <div class="panel-heading">Heading</div>
+            <div class="panel-body">
+                Tempor et ex deserunt cupidatat nisi officia. Consequat esse ut aliqua consectetur elit consectetur. Voluptate non amet aliqua nulla velit veniam fugiat veniam commodo laboris elit duis magna. Velit pariatur veniam aliquip irure reprehenderit deserunt.
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-heading">Heading</div>
+            <div class="panel-body">
+                Tempor et ex deserunt cupidatat nisi officia. Consequat esse ut aliqua consectetur elit consectetur. Voluptate non amet aliqua nulla velit veniam fugiat veniam commodo laboris elit duis magna. Velit pariatur veniam aliquip irure reprehenderit deserunt.
+            </div>
+        </div>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                $( '.panel-heading' ).click(function() {
+                    // show() - fadeIn(), slideDown()
+                    // hide() - fadeOut(), slideUp
+                    // toggle() - fadeToggle(), slideToggle()
+                    $( this ).parent().find( '.panel-body' ).slideToggle( 200 );
+                });
+            });
+        </script>
+    </body>
+</html>

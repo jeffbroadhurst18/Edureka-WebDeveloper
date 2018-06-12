@@ -1,0 +1,46 @@
+# Module 5 | Introduction to JavaScript | Topics
+------------------------------------------------
+
+- Introduction
+- Including JS
+- Using document.getElementById() and innerHTML property of DOM element to create a logger
+- Variables
+    - Variable scopes - global and function
+    - Variable hoisting
+    - Data types
+- Operators - relational, logical, arithmetic (increment, decrement, modulo), == vs ===
+- Control flow
+    - Conditional execution
+    - Looping - example: dynamically created HTML list
+- Functions
+    - Declaration
+    - Function hoisting
+    - arguments[]
+- Objects creation using constructor function
+- Date - getter and setter methods
+- Number
+    - toPrecision vs toFixed
+    - parseInt and parseFloat
+- String
+    - replace
+    - substring vs substr 
+- Boolean
+- Math
+    - random, max, min, round, ceil, floor
+- JSON
+    - format
+    - use
+    - parse and stringify
+- Dialogs
+    - alert
+    - confirm
+    - prompt
+- Event handling
+    - .on<<event>> methods
+    - addEventListener
+- Closures
+- strict mode - example: undeclared variable stops execution in strict mode
+- Exception handling
+    - try...catch...finally - example: gracefully handling undeclared variable in strict mode
+    - throwing custom errors
+    

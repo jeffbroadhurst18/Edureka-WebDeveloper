@@ -1,0 +1,16 @@
+a {
+    color: olive;
+}
+
+a:visited {
+    color: crimson;
+}
+
+a:hover {
+    color: yellow;
+    font-size: 2em;
+}
+
+a:active {
+    color: gray;
+}

@@ -1,0 +1,41 @@
+[Online link to this document](http://bit.ly/2hbRZFy)
+
+# Module 3 | Introduction to CSS | Topics
+-----------------------------------------
+
+- Hyperlink pseudo classes, list styles, table styling (covered in module 1)
+- CSS selectors
+	- id, class, tag
+	- combination of selectors
+	- attribute
+	- pseudo classes - :first-child, :first-letter, :first-line, :focus
+- CSS Units
+- Inheritance of styles
+- How conflicting styles are resolved
+	- own and inherited styles - initial and inherit values
+	- author stylesheets and user-agent sylesheet
+	- order of preference for styles - inline followed by in-document/external styles
+	- specificity of selectors and !important
+- Background related: background-color, background-image, background-size, background-repeat, background-position, background (shorthand property)
+- Text and font related: color, text-align, text-decoration, text-transform, font-style, font-size, font-weight, line-height, font (shorthand)
+- The box model - content, padding, border including border-radius & box-shadow (CSS3), margin and outline - longhand and shorthand properties
+- Dimension related - height and width, min- and max- modifiers
+- display related
+	- display property - inline, block, inline-block
+	- Note: visibility: hidden vs display:none
+	- opacity
+- Using image sprites
+- Positioning
+	- normal flow
+	- static positioning
+	- relative
+	- absolute - wrt document and wrt ancestor (parent in particular)
+	- fixed
+- Floating elements
+	- float
+	- clear
+	- containing floats
+- Media type - print stylesheets
+- Case studies
+	- Building a navigation menu
+	- Building a gallery of courses

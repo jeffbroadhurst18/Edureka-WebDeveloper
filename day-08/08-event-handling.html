@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <p id="para-1">
+            Officia esse ullamco eiusmod reprehenderit nulla amet sit. In aute cillum minim non adipisicing id qui irure eiusmod. Aute ea nostrud adipisicing incididunt fugiat aute. Est minim ex esse pariatur nisi cillum aliqua cillum aliqua excepteur esse. Laboris incididunt consequat ipsum cillum mollit. Eiusmod commodo commodo cillum sint. Commodo esse amet nulla aliquip amet commodo.
+        </p>
+        <p id="para-2">
+            Id laborum ad est labore dolore in excepteur qui nulla proident. Ut nulla excepteur sint duis dolor laborum voluptate cupidatat ex aliqua id commodo quis. Cillum commodo culpa proident eu non Lorem est ad officia ex consectetur adipisicing ipsum. Minim occaecat dolore proident excepteur excepteur laboris pariatur dolor officia dolor duis ea ea aliquip.
+        </p>
+
+        Name: <input type="text" id="name" />
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                var $paras = $( 'p' );
+
+                // we want to log the text of the paragraph that was clicked
+                $paras.on(
+                    'click',
+                    function() {
+                        console.log( this ); // this is the DOM node of the element on which event occured
+                        
+                        console.log( $( this ).html() );
+                    }
+                );
+
+                // for the popular events there are shorthand methods
+                $paras.mouseover(function() {
+                    console.log( $( this ).attr( 'id' ) );
+                });
+
+                $paras.eq(1).on(
+                    {
+                        click: function() {
+                            console.log( 'click of para 2' );
+                        },
+                        mouseover: function() {
+                            console.log( 'mouse is over para 2' );
+                        }
+                    }
+                );
+
+                $( 'input' ).on(
+                    {
+                        focus: function() {
+                            $( this ).css( 'background-color', 'goldenrod' );
+                        },
+                        blur: function() {
+                            $( this ).css( 'background-color', 'initial' );
+                        }
+                    }
+                );
+            });
+        </script>
+    </body>
+</html>

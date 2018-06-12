@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            /*
+                combinators - used to combine simple selectors to form a more complex selector
+                1. no spaces combinator - select all elements that obey each individual selector
+                2. space combinator - descendant selector
+                3. > - child selector
+                4. +, ~ - sibling selectors
+            */
+            a.crimson {
+                color: crimson;
+            }
+
+            /* descendant selector */
+            #intro-section a {
+                text-decoration: line-through;
+            }
+
+            /* child selector */
+            .main > a {
+                font-size: 3em;
+            }
+
+            div.main section#intro-section a {
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            Labore fugiat officia dolor esse qui adipisicing voluptate aute ex velit et. Eiusmod esse proident quis fugiat ad id enim quis sint ullamco fugiat. Do ea sint excepteur est qui Lorem ipsum ad ullamco esse adipisicing.
+            <section id="intro-section">
+                Cillum veniam nostrud dolor culpa sunt. Est elit quis in occaecat. Ut exercitation minim mollit exercitation nisi est cillum pariatur. Veniam tempor veniam proident consectetur in quis. Fugiat aliqua laboris occaecat id non ex officia duis ex. Reprehenderit anim sit reprehenderit eu exercitation aute voluptate anim. Lorem laboris cillum ullamco aliqua eu ut.
+                <a href="https://www.google.com" class="crimson">Google search page</a>
+            </section>
+            <a href="https://www.facebook.com" class="crimson">Facebook</a>
+        </div>
+        <a href="https://www.linkedin.com" id="linkedin-link">LinkedIN</a>
+    </body>
+</html>

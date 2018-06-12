@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Geolocation</title>
+    </head>
+    <body>
+        <img src='' id="maps-image" />
+
+        <script>
+            function success( position ) {
+                console.log( 'inside success()' );
+                console.log( position.coords.latitude, position.coords.longitude );
+
+                var googleStaticMapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=' + position.coords.latitude + ',' + position.coords.longitude + '&zoom=15&size=600x300&maptype=roadmap&key=AIzaSyBw55kMaSns1Ad988IZp0DL-2819zFeHIk';
+
+                document.getElementById( 'maps-image' ).src = googleStaticMapUrl;
+            }
+
+            function error( err ) {
+                console.log( 'inside error()' );
+                console.log( err );
+            }
+
+            navigator.geolocation.getCurrentPosition( success, error );
+        </script>
+    </body>
+</html>

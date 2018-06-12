@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <p id="para-1">
+            Magna magna adipisicing labore ad ipsum minim ipsum fugiat. Proident pariatur incididunt reprehenderit elit voluptate. Laboris nisi exercitation adipisicing est minim voluptate.
+        </p>
+        <p id="para-2">
+            Tempor veniam dolore tempor ea id proident commodo deserunt quis fugiat nisi laborum laborum dolor. Elit consectetur consequat anim exercitation excepteur quis aute irure duis excepteur. Irure cillum et non nostrud sit commodo fugiat. Quis fugiat do nulla aute voluptate incididunt ad elit tempor quis anim. Mollit aliqua officia eu nostrud aliquip quis fugiat qui eu esse qui cupidatat esse.
+        </p>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                // as a convention collection objects are prefixed with a $
+                var $paras = $( 'p' );
+
+                // collection objects have a lot of methods - uncomment and check the following are methods
+                // console.log( paras.html );
+                // console.log( paras.css );
+                // console.log( paras.each );
+
+                // html() gets and sets the html within the elements of a collection
+                // many methods are both getters and setters
+                
+                // *** as a getter ***
+                // below is usage of html() as a getter
+                // as a getter, the first item's html will be returned
+                console.log( $paras.html() );
+
+                console.log( $( $paras[1] ).html() );
+                // there is a collection object method called eq()
+                console.log( $paras.eq(1).html() );
+
+                // *** as a setter ***
+                setTimeout(
+                    function() {
+                        // as a setter, html() will set the inner html of all nodes in the collection
+                        $paras.html( 'new content for the para' );
+
+                        // same approach if you want to affect only one item in the collection
+                        // $paras.eq(1).html( 'new content for the para' );
+                    },
+                    5000
+                );
+            });
+        </script>
+    </body>
+</html>

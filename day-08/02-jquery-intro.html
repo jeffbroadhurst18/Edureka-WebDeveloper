@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Getting started | jQuery</title>
+    </head>
+    <body>
+        <p id="quote">
+            With great power comes great responsibility
+        </p>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // $ or jQuery is a function - the jQuery namespace
+            console.log( $ );
+            console.log( jQuery );
+            console.log( $ === jQuery ); // true
+
+            console.log( document.getElementById( 'quote' ).innerHTML );
+            console.log( $( '#quote' ).html() );
+        </script>
+    </body>
+</html>

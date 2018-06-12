@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Box model</title>
+        <style>
+            /*
+            p {
+                padding: 10px;
+                border: 5px solid black;
+                margin: 20px;
+            }
+            */
+            p:nth-child(1) {
+                /* since paragraph is a block-level element by default it gets 100% width by default */
+                width: 50%;
+                height: 200px;
+                min-width: 300px;
+                max-width: 500px;
+                border: 1px solid black;
+            }
+
+            p:nth-child(2) {
+                padding: 40px 10px 0 60px;
+                padding-top: 100px;
+                border: 1px solid black;
+            }
+
+            p:nth-child(3) {
+                border: 1px solid black;
+                border-top: 5px dashed crimson;
+                border-top-color: #33ddaa;
+                border-left-width: 10px;
+                border-left-style: double;
+            }
+
+            p:nth-child(4) {
+                width: 500px;
+                padding: 10px 20px;
+                border: 2px solid goldenrod;
+                /* css3 properties */
+                border-radius: 10px; /* rounds the corners of the box by applying an arc of radius 10px */
+                box-shadow: 10px 30px 10px 20px lightgray;
+                margin: 50px auto;
+            }
+
+            p:nth-child(5) {
+                margin: 100px 50px;
+                margin-top: 40px;
+            }
+
+            p:nth-child(6) {
+                box-sizing: border-box;
+                width: 50%; /* since boder-box is used, width will be the width of content + padding + border areas */
+                padding: 40px;
+                border: 20px solid olive;
+            }
+
+            p:nth-child(7) {
+                float: right;
+                box-sizing: border-box;
+                width: 50%;
+                padding: 20px;
+                border: 2px solid crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Consectetur elit ullamco incididunt sit est veniam.
+        </p>
+        <p>
+            Ad ut deserunt duis commodo enim magna. Non quis sit excepteur in consequat amet anim cillum. Eu sunt magna tempor commodo duis ullamco do minim consectetur culpa. Laboris minim pariatur aute id incididunt ut qui in id deserunt aliquip ex elit. Excepteur elit nisi ex est labore nostrud laborum. Cillum id ullamco cupidatat non et duis ex Lorem esse voluptate do voluptate. Dolore cupidatat et occaecat esse ad.
+        </p>
+        <p>
+            Fugiat ullamco id amet ullamco veniam. Ex aliqua voluptate cupidatat laboris eiusmod. Est aliquip eiusmod consectetur duis deserunt excepteur laboris. Tempor nostrud cupidatat et labore cupidatat esse incididunt id est magna laboris. Consectetur excepteur adipisicing laboris dolore consectetur in proident nostrud laborum elit do eu aliqua elit. Ipsum sit culpa consectetur consectetur ea ex pariatur dolor in cillum. Sunt nisi cillum ad id aliqua cupidatat exercitation. Labore aute esse deserunt magna laborum ex dolor est. Id veniam irure commodo irure et in. Consectetur ipsum non sunt esse nisi fugiat sunt elit consectetur minim voluptate. Sint tempor enim nulla pariatur officia consequat do veniam do elit sint ipsum mollit nulla.
+        </p>
+        <p>
+            Occaecat sit mollit non irure ad proident ea cupidatat exercitation cillum sit consectetur. Ad qui nulla sunt sunt aute irure Lorem veniam aute. Officia ex excepteur aute nulla exercitation. Consectetur magna Lorem velit nisi adipisicing do duis dolor. Deserunt Lorem aliqua excepteur officia sit laboris. Nostrud id sint velit ullamco ipsum sit qui ut. Et reprehenderit enim dolor sint irure laboris commodo.
+        </p>
+        <p>
+            Excepteur cillum Lorem adipisicing occaecat officia quis reprehenderit dolor aliqua. Non eu fugiat tempor duis.
+        </p>
+        <p>
+            Amet pariatur ea irure ipsum voluptate labore adipisicing laboris do excepteur. Ut consectetur dolor fugiat exercitation ea reprehenderit dolor amet amet nisi consequat commodo. Consequat in ex eu do et minim dolor esse adipisicing.
+        </p>
+        <p>
+            Cillum sunt eiusmod duis laborum. Ut adipisicing proident veniam cupidatat aliquip velit consequat nostrud labore anim incididunt deserunt. Cupidatat Lorem cupidatat ex officia anim aute velit est fugiat. Nulla ex consectetur enim nulla id irure consequat adipisicing reprehenderit fugiat. Sunt qui deserunt elit est labore quis enim.
+        </p>
+    </body>
+</html>

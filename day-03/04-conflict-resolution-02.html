@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            /* 
+                rule 3: 
+                class is considered more specific than a type
+                id is considered more specific than a class
+                (in case of conflict) the property value from the most specific selection is applied
+            */
+            #last-para {
+                color: goldenrod;
+            }
+
+            .olive {
+                color: olive;
+            }
+            
+            p {
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Voluptate anim dolor non dolor enim culpa et nulla ut eu. Enim eu do incididunt eu consectetur minim ullamco velit eiusmod reprehenderit. Aliquip excepteur officia aute nostrud velit minim enim do deserunt. Minim ut non pariatur exercitation qui exercitation. Sint Lorem ex dolore sit amet consectetur nisi et id deserunt commodo. Eiusmod occaecat Lorem sit adipisicing.
+        </p>
+
+        <p class="olive">
+            Qui veniam amet cillum consectetur ex veniam elit ullamco duis nulla consequat fugiat. Minim non veniam occaecat dolore anim voluptate nulla consectetur eiusmod quis sunt nulla ea. Magna quis exercitation voluptate non.
+        </p>
+
+        <p class="olive" id="last-para">
+            Qui veniam amet cillum consectetur ex veniam elit ullamco duis nulla consequat fugiat. Minim non veniam occaecat dolore anim voluptate nulla consectetur eiusmod quis sunt nulla ea. Magna quis exercitation voluptate non.
+        </p>
+    </body>
+</html>

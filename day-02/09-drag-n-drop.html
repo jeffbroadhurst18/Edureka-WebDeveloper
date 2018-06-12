@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Drag n drop</title>
+        <style>
+            #drop-target {
+                height: 300px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="drop-target"></div>
+        <hr/>
+        <img src="./images/dexter.jpg" draggable="true" id="img-1" />
+
+        <script>
+            var dropTarget = document.getElementById( 'drop-target' );
+            var img1 = document.getElementById( 'img-1' );
+
+            img1.ondragstart = function( event ) {
+                console.log( 'dragging of img1 has started' );
+                event.dataTransfer.setData( 'id', this.id );
+            };
+
+            dropTarget.ondragover = function( event ) {
+                console.log( 'img1 is being dragged over dropTarget' );
+                event.preventDefault();
+            };
+
+            dropTarget.ondrop = function( event ) {
+                console.log( 'img1 is being dropped over dropTarget' );
+                var id = event.dataTransfer.getData( 'id' );
+
+                this.appendChild( document.getElementById( id ) );
+            };
+        </script>
+    </body>
+</html>

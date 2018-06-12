@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Web storage</title>
+    </head>
+    <body>
+        <script>
+            var nameLS = localStorage.getItem( 'name' );
+            var nameSS = sessionStorage.getItem( 'name' );
+
+            console.log( nameLS );
+            console.log( nameSS );
+
+            localStorage.removeItem( 'favorite-band' );
+            
+            document.body.style.backgroundColor = localStorage.getItem( 'favorite-color' );
+        </script>
+    </body>
+</html>

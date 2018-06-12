@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <style>
+            .bold {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para-1" class="crimson">
+            In anim sit ullamco reprehenderit non elit fugiat nisi. Irure ipsum ea aute aute sit cupidatat magna consectetur enim commodo. Commodo labore duis elit dolore veniam esse velit ex nulla culpa. Nostrud ea proident do anim veniam pariatur commodo cillum nostrud ex cillum ipsum consectetur dolore. Consectetur sint do in dolor cillum qui. Sit proident esse Lorem fugiat dolore labore et.
+        </p>
+        <p id="para-2">
+            Ut est anim do cupidatat tempor nisi Lorem id dolore minim ea. Culpa amet velit id mollit. Pariatur consequat tempor incididunt ullamco labore do. Pariatur laboris excepteur id ipsum. Incididunt ipsum quis aute aute et amet fugiat aute adipisicing et amet. Est dolor est consequat esse excepteur ullamco. Commodo do commodo officia labore velit.
+        </p>
+        <p id="para-3" class="crimson">
+            Incididunt sint duis adipisicing voluptate cupidatat anim culpa laboris officia voluptate dolore ad. Pariatur labore amet dolore voluptate labore sunt eiusmod cillum ut nulla consequat ea do mollit. Adipisicing reprehenderit excepteur officia ex laborum sint aute eiusmod sit et sunt sint occaecat aute. Ea mollit consectetur id aliquip minim consequat. Aliquip nisi exercitation proident tempor excepteur in cupidatat culpa quis anim magna. Ex dolore voluptate sint quis aliqua ipsum voluptate. Ex ad irure cupidatat elit ipsum non adipisicing.
+        </p>
+
+        <script src="./external/jquery-3.2.1.min.js"></script>
+
+        <script>
+            // apart from CSS selector you can also pass a DOM node to $()
+            // Ready event is fired when all DOM nodes have been created by the browser
+            $( document ).ready(function() {
+                // *** setter ***
+                // use this syntax of css() for setting single CSS proeprties
+                // $( '.crimson' ).css( 'color', 'crimson' );
+                // $( '.crimson' ).css( 'font-size', '2em' );
+
+                $( '.crimson' ).css(
+                    {
+                        color: 'crimson',
+                        "font-size": '2em',
+                        "text-decoration": 'underline'
+                    }
+                );
+
+                // *** getter ***
+                // gets the css property value for the first item in the collection
+                var $paras = $( 'p' );
+                console.log( $paras.css( 'color' ) );
+                console.log( $paras.eq(1).css( 'color' ) );
+
+                $( 'p:nth-child(2)' ).addClass( 'bold' );
+
+                setTimeout(
+                    function() {
+                        $( 'p:nth-child(2)' ).removeClass( 'bold' );
+                    },
+                    5000
+                )
+            });
+        </script>
+    </body>
+</html>

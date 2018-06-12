@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Including JS</title>
+    </head>
+    <body>
+        <!-- on<event> attributes on elements help execute JS when the event occurs on the element -->
+        <button onclick="logOutput( 'button1 was clicked' ); /*alert( 'button was clicked' );*/" id="button-1">Click me</button>
+        <button id="button-2">Click me</button>
+        <button id="button-3">Click me</button>
+
+        <div id="output"></div>
+
+        <!-- script tag itself is HTML - the content within the script tag is JavaScript (JS) -- EcmaScript (ES) latest version of JS (i.e. ES) is ES2015 aka ES6 -->
+        
+        <script>
+            function logOutput( message ) {
+                document.getElementById( 'output' ).innerHTML = document.getElementById( 'output' ).innerHTML + '<div>' + message + '</div>';
+            }
+
+            /*
+                For every HTML element on the page, the browser creates an object - DOM node for the element - Document Object Model
+            */
+            window.onload = function() {
+                var button2 = document.getElementById( 'button-2' );
+                button2.onclick = function() {
+                    logOutput( 'button2 was clicked' );
+                    // alert( 'button2 was clicked' );
+                };
+            };
+        </script>
+
+        <script src="./js/index.js"></script>
+    </body>
+</html>

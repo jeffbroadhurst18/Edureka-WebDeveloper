@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Carousel</title>
+        <link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <div class="carousel slide" id="example-carousel"> <!-- data-ride="carousel" data-interval="2000" -->
+            <ol class="carousel-indicators">
+                <li data-target="#example-carousel" data-slide-to="0"></li>
+                <li data-target="#example-carousel" data-slide-to="1" class="active"></li>
+                <li data-target="#example-carousel" data-slide-to="2"></li>
+            </ol>
+            
+            <div class="carousel-inner">
+                <div class="item">
+                    <img src="./images/image1.jpg" />
+                    <div class="carousel-caption">
+                        <h2>New York</h2>
+                        <p>
+                            Qui id ut irure est irure nisi. Fugiat nulla aute esse amet dolor Lorem laborum. Sint velit aliqua mollit ipsum non labore consectetur. Lorem laboris deserunt nisi pariatur voluptate. Pariatur esse est culpa enim ex reprehenderit culpa labore. Est cillum ea anim culpa nostrud ut. Incididunt ea sint aliquip fugiat laborum eu labore Lorem in.
+                        </p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Know more</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item active">
+                    <img src="./images/image2.jpg" />
+                </div>
+                <div class="item">
+                    <img src="./images/image3.jpg" />
+                </div>
+            </div>
+
+            <a href="#example-carousel" class="left carousel-control" data-slide="prev">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+            <a href="#example-carousel" class="right carousel-control" data-slide="next">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+            </a>
+        </div>
+
+        <script src="./external/jquery-3.3.1.js"></script>
+        <script src="./external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

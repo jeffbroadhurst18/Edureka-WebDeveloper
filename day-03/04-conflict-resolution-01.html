@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            /* rule 1: last one wins (as long the selector is same across the different blocks) */
+            p {
+                color: crimson;
+                color: olive;
+            }
+        </style>
+    </head>
+    <body>
+        <style>
+            p {
+                color: blue;
+            }
+        </style>
+        <p>
+            Voluptate anim dolor non dolor enim culpa et nulla ut eu. Enim eu do incididunt eu consectetur minim ullamco velit eiusmod reprehenderit. Aliquip excepteur officia aute nostrud velit minim enim do deserunt. Minim ut non pariatur exercitation qui exercitation. Sint Lorem ex dolore sit amet consectetur nisi et id deserunt commodo. Eiusmod occaecat Lorem sit adipisicing.
+        </p>
+
+        <!-- rule 2: inline styles will always trump other styles -->
+        <p style="color: gray;">
+            Qui veniam amet cillum consectetur ex veniam elit ullamco duis nulla consequat fugiat. Minim non veniam occaecat dolore anim voluptate nulla consectetur eiusmod quis sunt nulla ea. Magna quis exercitation voluptate non.
+        </p>
+
+        <p>
+            Qui veniam amet cillum consectetur ex veniam elit ullamco duis nulla consequat fugiat. Minim non veniam occaecat dolore anim voluptate nulla consectetur eiusmod quis sunt nulla ea. Magna quis exercitation voluptate non.
+        </p>
+
+        <style>
+            p {
+                color: green;
+            }
+        </style>
+        <link rel="stylesheet" href="./css/04-styles-01.css">
+    </body>
+</html>
