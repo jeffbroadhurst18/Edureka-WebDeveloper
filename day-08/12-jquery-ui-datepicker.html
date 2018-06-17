@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Datepicker | jQuery UI</title>
+        <link rel="stylesheet" href="external/jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="external/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    </head>
+    <body>
+        <label>Start Date<input type="text" id="start-date" name="start-date" /></label>
+
+        <script src="external/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+        <script src="external/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                // var newYear2019 = new Date( 2019, 0, 1 );
+                $( '#start-date' ).datepicker({
+                    minDate: 0,
+                    //maxDate: newYear2019
+                    maxDate: '+1Y +2M +10D',
+                    dateFormat: 'dd M yy',
+                    changeMonth: true,
+                    changeYear: true
+                });
+            });
+        </script>
+    </body>
+</html>

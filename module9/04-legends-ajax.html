@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ajax demo</title>
+        <link rel="stylesheet" href="external/bootstrap-3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="external/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Legends</h1>
+            <hr />
+            <div class="row">
+                <div class="col-sm-4">
+                    <a data-toggle="modal" href='#legend-details'>
+                        <img src="images/abraham_lincoln.jpg" data-url="descriptions/abraham-lincoln.html" />
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a data-toggle="modal" href='#legend-details'>
+                        <img src="images/Ali-8.jpg" data-url="descriptions/muhammad-ali.html" />
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a data-toggle="modal" href='#legend-details'>
+                        <img src="images/GANDI-copia-300x200.jpg" data-url="descriptions/gandhi.html" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="legend-details">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Legend</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="external/jquery-3.2.1.min.js"></script>
+        <script src="external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $( 'img' ).click(function() {
+                    $.ajax({
+                        url: $( this ).attr( 'data-url' ),
+                        method: 'GET',
+                        success: function( response ) {
+                            $( '#legend-details .modal-body' ).html( response );
+                        },
+                        error: function() {
+                            alert( 'Something went wrong fetching data' );
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

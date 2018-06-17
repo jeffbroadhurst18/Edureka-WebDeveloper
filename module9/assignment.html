@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Forecast via Ajax</title>
+</head>
+<style>
+    #forecast {
+        height: 200px;
+        width : 400px;
+        border: 1px solid black;
+        background-color: lightgreen;
+        color: blue;
+    }
+</style>
+<body>
+	<h1>Weather Forecast</h1>
+	<br />
+	<h4>Click to see the forecast for the day you require</h4>
+	<br />
+	<button id="today">Today</button>
+	<button id="tomorrow">Tomorrow</button>
+	<br /><br />
+    <div id="title"></div>
+    <br/>
+	<div id="forecast"></div>
+	<script src="external/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			function success(resp) {
+				$('#forecast').eq(0).html(resp);
+			}
+
+			function error() {
+				alert('Oops! Some error occured');
+			}
+
+			$('#today').eq(0).click(function () {
+				$('#title').eq(0).html("Today's forecast " + new Date().toLocaleDateString("en-GB"));
+
+				$.ajax({
+					method: 'GET',
+					url: 'today.txt',
+					data: undefined,
+					success: success,
+					error: error
+				});
+			})
+
+			$('#tomorrow').eq(0).click(function () {
+                var d = new Date();
+                d.setDate(d.getDate()+1);
+                
+				$('#title').eq(0).html("Tomorrow's forecast " + (d.toLocaleDateString("en-GB")));
+
+				$.ajax({
+					method: 'GET',
+					url: 'tomorrow.txt',
+					data: undefined,
+					success: success,
+					error: error
+				});
+			})
+		})
+	</script>
+</body>
+</html>

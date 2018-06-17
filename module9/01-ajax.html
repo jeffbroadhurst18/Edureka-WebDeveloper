@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ajax demo</title>
+    </head>
+    <body>
+        <div id="quote"></div>
+        <script>
+            var xhr = new XMLHttpRequest();
+
+            xhr.addEventListener( 'readystatechange', function( event ) {
+                console.log( 'readystatechange event was fired' );
+
+                // we are interested when readyState becomes 4 (response is complete)
+                if( xhr.readyState === 4 ) {
+                    if( xhr.status === 200 ) {
+                        document.getElementById( 'quote' ).innerHTML = xhr.responseText;
+                    } else { // error
+                        alert( 'Oops! Some error occured' );
+                    }
+                }
+            });
+
+            xhr.open( 'GET', 'quot.txt', true );
+            xhr.send(); // any data to be passed to server is passed as a string argument to send()
+            console.log( 'end of script' );
+        </script>
+    </body>
+</html>

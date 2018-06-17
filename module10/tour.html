@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link href="./external/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./external/bootstrap-tour.min.css" rel="stylesheet">
+</head>
+<style>
+	#div1, #div2 {
+		height: 300px;
+		width: 600px;
+		border: 1px solid black;
+		margin: 50px;
+        display: inline-block;
+	}
+
+    img {
+		height: 300px;
+		width: 600px;
+	}
+
+    #top-bit {
+        margin-left: 30px;
+    }
+</style>
+
+<body>
+    <div id="top-bit">
+        <h1>Two wonderful cities</h1>
+        <h3>New York and Rome</h3>
+        <button id="start" class="btn btn-primary">Click to start tour</button>
+    </div>
+
+    <div>
+        <div id="div1">
+            <img src="./images/new-york.jpg" />
+        </div>
+        <div id="div2">
+            <img src="./images/rome.jpg" />
+        </div>
+    </div>
+</body>
+<script src="./external/jquery-3.2.1.min.js"></script>
+<script src="./external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="./external/bootstrap-tour.min.js"></script>
+<script>
+
+	$(document).ready(function () {
+
+		$('#start').eq(0).click(function () {
+
+			// Instance the tour
+			var tour = new Tour({
+				steps: [
+					{
+						element: "#div1",
+						title: "New York",
+						content: "New York , New York , so good they named it twice. New York is truly an amazing city and really is a city that never sleeps .Besides being the largest city in the U.S , made up of 5 separate boroughs, this little island is the world's financial centre, offers world famous restaurants, museums and architecture, as well as being home to many of the worlds best known organisations such as the United Nations and the World Trade Organisation. "
+					},
+					{
+						element: "#div2",
+						title: "Rome",
+						content: "Situated on the River Tiber, between the Apennine Mountains and the Tyrrhenian Sea, the ‘Eternal City’ of Rome (Roma) was once the administrative centre of the mighty Roman Empire, governing a vast region that stretched from Britain to Mesopotamia. Today, it remains the seat of the Italian government and home to numerous ministerial offices but is superseded by Milan, in the industrial north, for business and finance."
+					}
+				]
+			});
+
+			// Initialize the tour
+			tour.init();
+
+			// Start the tour
+			tour.start();
+
+		})
+
+	})
+</script>
+</html>

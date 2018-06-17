@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Google Services | URL Shortener demo</title>
+        <link rel="stylesheet" href="external/bootstrap-3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="external/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <legend>Shorten a URL</legend>
+                </div>
+        
+                <div class="form-group">
+                    <label class="col-sm-2" for="long-url">Long URL</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="long-url" name="long-url" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <button type="button" class="btn btn-primary" id="shorten">Shorten</button>
+                    </div>
+                </div>
+            </form>
+
+            Shortened URL: <span id="short-url"></span>
+        </div>
+
+        <script src="external/jquery-3.2.1.min.js"></script>
+        <script src="external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+
+        <script>
+            // gapi is assured only once window loads - so we handle window load instead of document ready
+            $(window).on('load', function() {
+                console.log( gapi );
+
+                gapi.client.setApiKey( 'AIzaSyC3FZQ1upvjsoAIDhJgkOXwEbWNOO3xmwI' );
+                gapi.client.load( 'urlshortener', 'v1', function() {
+                    $( '#shorten' ).click(function() { 
+                        var longUrl = $( '#long-url' ).val();
+
+                        var request = gapi.client.urlshortener.url.insert({
+                            longUrl: longUrl
+                        });
+
+                        request.execute(function( response ) {
+                            if( !response.id ) {
+                                alert( 'Something went wrong' );
+                                return;
+                            }
+
+                            $( '#short-url' ).html( response.id );
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

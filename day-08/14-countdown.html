@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Countdown TImer plugin demo</title>
+        <link rel="stylesheet" href="external/jquery.countdown.package-2.1.0/css/jquery.countdown.css">
+        <style>
+            #countdown {
+                overflow: auto;
+            }
+            
+            .countdown-period {
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="countdown"></div>
+
+        <script src="external/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+        <script src="external/jquery.countdown.package-2.1.0/js/jquery.plugin.min.js"></script>
+        <script src="external/jquery.countdown.package-2.1.0/js/jquery.countdown.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $( '#countdown' ).countdown({
+                    until: new Date( 2019, 0, 1 )
+                });
+            });
+        </script>
+    </body>
+</html>

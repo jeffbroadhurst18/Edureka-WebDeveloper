@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Spinner | jQuery UI</title>
+        <link rel="stylesheet" href="external/jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="external/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    </head>
+    <body>
+        <label>Quantity <input type="text" id="quantity" name="quantity" /></label>
+
+        <script src="external/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+        <script src="external/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script src="external/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $( '#quantity' ).spinner({
+                    min: 1,
+                    max: 10,
+                    step: 0.5
+                });
+
+                $( '#quantity' ).keypress(function( event ) {
+                    var keyCode = event.which;
+                    console.log( keyCode ); // ASCII code
+                    if( keyCode === 46 || keyCode >= 48 && keyCode <= 57 ) {
+                        return;
+                    } else {
+                        event.preventDefault();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
