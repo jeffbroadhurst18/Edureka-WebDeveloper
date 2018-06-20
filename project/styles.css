@@ -1,0 +1,35 @@
+ @font-face {
+font-family: "Lobster";
+src: url("./lobster/Lobster_1.3.otf") format("opentype")
+}
+
+body {
+			margin-top: 70px;
+			margin-bottom: 20px;
+            background-color: lightgoldenrodyellow;
+            font-family: 'Lobster', Arial, sans-serif;
+            font-size: 2em;
+		}
+
+#map-container, #map-container2 {
+    height: 400px;
+    margin: 30 0;
+    border: 2px ridge darkgray;
+}
+
+.single {
+    margin: 0;
+}
+
+    #social-media-links {
+        overflow: auto;
+    }
+
+    #social-media-links li {
+        float: left;
+        width: 20%;
+        text-align: center;
+        font-size: 3em;
+    }
+
+   

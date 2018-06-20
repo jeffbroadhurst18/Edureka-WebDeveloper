@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="./external/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">3 Cities Travel</a>
+                </div>
+        
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="new-york.html">New York</a></li>
+					<li><a href="rome.html">Rome</a></li>
+					<li><a href="reykjavik.html">Reykjavik</a></li>
+					<li><a href="charts.html">Charts</a></li>
+				</ul>
+			    </div>
+            </div>
+        </nav>
+        
+        <div id="carousel-id" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-id" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item">
+                    <img src="images/new-york.png" style="width:100%;">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h2>New York</h2>
+                            <p>America's Big Apple</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/rome.png" style="width:100%;">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h2>Rome</h2>
+                            <p>The Eternal City of Italy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item active">
+                    <img src="images/reykjavik.png" style="width:100%;">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h2>Reykjavik</h2>
+                            <p>Iceland has the world's northern-most capital city.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+
+        <div class="container">
+            <h2 style="margin-top: 100px; margin-bottom: 40px; text-align: center;">Guided Tours around the three of the world's most exciting cities</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="images/airplane.png" class="center-block" />
+                    <h3 class="text-center">Travel</h3>
+                    <p>
+                        We will arrange for you to fly to your destination on a plane.
+                    </p>
+                </div>
+                
+                <div class="col-sm-4">
+                    <img src="images/hotel.png" class="center-block" />
+                    <h3 class="text-center">Hotel</h3>
+                    <p>
+                        We can find you a great hotel in a brilliant location.
+                    </p>
+                </div>
+                
+                <div class="col-sm-4">
+                    <img src="images/food.png" class="center-block" />
+                    <h3 class="text-center">Food</h3>
+                    <p>
+                        We'll ensure you eat at the finest restaurants in the city.
+                    </p>
+                </div>
+            </div>
+
+            <div class="well" style="margin-top: 60px; margin-bottom: 40px;">
+                <ul class="list-unstyled" id="social-media-links">
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            Copyright &copy; 2018 - 3 Cities Travel <a data-toggle="modal" href='#modal-tnc'>Terms and Conditions</a>
+        </div>
+            
+        <div class="modal fade text-left" id="modal-tnc">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title">Terms and conditions</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            We are a team of travel enthusiasts who are determined give you a great travel experience.
+                        </p>
+
+                        <p>
+                            We are passionate about travel and serving our customers. If you are the same come and <a href="#">join us</a>.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./external/jquery-3.2.1.min.js"></script>
+        <script src="./external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

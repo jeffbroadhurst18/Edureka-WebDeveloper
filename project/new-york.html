@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">3 Cities Travel</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="new-york.html">New York</a></li>
+					<li><a href="rome.html">Rome</a></li>
+					<li><a href="rekjavik.html">Reykjavik</a></li>
+					<li><a href="charts.html">Charts</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+            <h1>New York</h1>
+			<!-- <div class="col-md-10 col-md-offset-1"> -->
+				<p>New York , New York , so good they named it twice. New York is truly an amazing city and really is a city that never sleeps. Besides being the largest city in the U.S , made up of 5 separate boroughs, this little island is the world's financial centre, offers world famous restaurants, museums and architecture, as well as being home to many of the worlds best known organisations such as the United Nations and the World Trade Organisation. New York is a melting pot of nationalities from every corner of the planet, with a population of around eight million people , speaking a total of over 80 languages. Indeed more than 47 percent of the residents over 5 years old, speak a language other than English at home. Add to that the 45 million or more visitors annually visiting over 23,000 restaurants, 150 museums and more than 12,000 stores bursting with the world's top brand names, the pace of life in New York is enough to exhaust even the most seasoned of travellers.</p>
+			<!-- </div> -->
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>New York</h4>
+				<hr class="single" />
+				<div id="map-container"></div>
+			</div>
+
+			<div class="col-md-6">
+				<h4>City Centre</h4>
+				<hr class="single" />
+				<div id="map-container2"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container text-center">
+		Copyright &copy; 2018 - 3 Cities Travel <a data-toggle="modal" href='#modal-tnc'>Terms and Conditions</a>
+	</div>
+
+	<div class="modal fade text-left" id="modal-tnc">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title">Terms and conditions</h3>
+				</div>
+				<div class="modal-body">
+					<p>
+						We are a team of travel enthusiasts who are determined give you a great travel experience.
+					</p>
+					<p>
+						We are passionate about travel and serving our customers. If you are the same come and <a href="#">join us</a>.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./external/jquery-3.2.1.min.js"></script>
+	<script src="./external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		function initMap() {
+
+			// New York's coordinates
+
+			var position = new google.maps.LatLng(40.7294007, -73.9829166);
+
+			var map = new google.maps.Map(
+				document.getElementById('map-container'),
+				{
+					center: position,
+					zoom: 4,
+				}
+			);
+
+			var marker = new google.maps.Marker(
+				{
+					position: position,
+					map: map
+				}
+			);
+
+			var map2 = new google.maps.Map(
+				document.getElementById('map-container2'),
+				{
+					center: position,
+					zoom: 13,
+				}
+			);
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHKhlPIDo7ZU8sUzlcTfRkI3xCjbGJ78s&callback=initMap"></script>
+</body>
+</html>

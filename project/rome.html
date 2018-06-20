@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./external/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">3 Cities Travel</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="new-york.html">New York</a></li>
+					<li><a href="rome.html">Rome</a></li>
+					<li><a href="reykjavik.html">Reykjavik</a></li>
+					<li><a href="charts.html">Charts</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+            <h1>Rome</h1>
+			<!-- <div class="col-md-10 col-md-offset-1"> -->
+				<p>Situated on the River Tiber, between the Apennine Mountains and the Tyrrhenian Sea, the ‘Eternal City’ of Rome (Roma) was once the administrative centre of the mighty Roman Empire, governing a vast region that stretched from Britain to Mesopotamia. Today, it remains the seat of the Italian government and home to numerous ministerial offices but is superseded by Milan, in the industrial north, for business and finance. The legendary beginnings of Rome are related in the tale of Romulus and Remus. Princess Rhea Silvia, ravished by Mars (the God of War), gave birth to the twins and abandoned them to fate. The River Tiber carried them to the Palatine Hill, where a she-wolf mothered the babes until their discovery by a shepherd. Romulus later killed Remus, before going on to found Rome in the marshy lowlands of seven hills. The anniversary of Rome’s foundation –21 April 753BC – is now marked by a public holiday. The historians’ version is no less astonishing. It traces the rise of the city from unimportant pastoral settlement – the earliest remains date back to the ninth century BC – to vast empire, ruled over by a string of emperors. Rome saw a second period of development during the 15th-century Renaissance, when the Papacy took up permanent residence in the city. Although Rome’s power has since waned, the city remains the essence of European civilisation.</p>
+			<!-- </div> -->
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Rome</h4>
+				<hr class="single" />
+				<div id="map-container"></div>
+			</div>
+
+			<div class="col-md-6">
+				<h4>City Centre</h4>
+				<hr class="single" />
+				<div id="map-container2"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container text-center">
+		Copyright &copy; 2018 - 3 Cities Travel <a data-toggle="modal" href='#modal-tnc'>Terms and Conditions</a>
+	</div>
+
+	<div class="modal fade text-left" id="modal-tnc">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title">Terms and conditions</h3>
+				</div>
+				<div class="modal-body">
+					<p>
+						We are a team of travel enthusiasts who are determined give you a great travel experience.
+					</p>
+					<p>
+						We are passionate about travel and serving our customers. If you are the same come and <a href="#">join us</a>.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./external/jquery-3.2.1.min.js"></script>
+	<script src="./external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		function initMap() {
+
+			// Rome's coordinates
+
+			var position = new google.maps.LatLng(41.8985034,12.4748772);
+
+			var map = new google.maps.Map(
+				document.getElementById('map-container'),
+				{
+					center: position,
+					zoom: 4,
+				}
+			);
+
+			var marker = new google.maps.Marker(
+				{
+					position: position,
+					map: map
+				}
+			);
+
+			var map2 = new google.maps.Map(
+				document.getElementById('map-container2'),
+				{
+					center: position,
+					zoom: 13,
+				}
+			);
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHKhlPIDo7ZU8sUzlcTfRkI3xCjbGJ78s&callback=initMap"></script>
+</body>
+</html>
