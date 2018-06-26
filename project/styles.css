@@ -6,7 +6,6 @@ src: url("./lobster/Lobster_1.3.otf") format("opentype")
 body {
 			margin-top: 70px;
 			margin-bottom: 20px;
-            background-color: lightgoldenrodyellow;
             font-family: 'Lobster', Arial, sans-serif;
             font-size: 2em;
 		}
@@ -15,6 +14,7 @@ body {
     height: 400px;
     margin: 30 0;
     border: 2px ridge darkgray;
+    border-radius: 5px;
 }
 
 .single {
@@ -40,4 +40,25 @@ rect {
     margin-left: 200px;
     margin-bottom: 50px;
 }
-   
+  
+.hotels-container, #hotels-intro {
+    width:80%;
+    margin: 20px auto;
+}
+
+.hotels-container a {
+    text-decoration: none;
+}
+
+.hotel-pic {
+    float: left;
+    margin: 10px 30px;
+    border: 2px ridge darkgrey;
+    border-radius: 5px;
+}
+
+#change { 
+    float:right;
+    margin-top: 10px;
+    color: black;
+}
